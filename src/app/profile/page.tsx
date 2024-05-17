@@ -29,16 +29,15 @@ export default function ProfilePage() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-            <h1>Profile</h1>
+    <div className="flex flex-col items-center justify-center  h-auto py-2">
+            <h1 className='text-2xl mb-4 mt-4 font-bold'>Profile Page</h1>
             <hr />
-            <p>Profile page</p>
-            <h2 className="p-1 rounded bg-green-500">{data === 'nothing' ? "Nothing" : <Link href={`/profile/${data}`}>{data}
+            <h2 className="p-1 mb-2 rounded bg-green-500">{data === 'Nothing' ? "" : <Link href={`/profile/${data}`}>{data}
             </Link>}</h2>
         <hr />
         <button
         onClick={logout}
-        className="bg-blue-500 mt-4 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        className="bg-blue-500 mt-4 mb-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         >Logout</button>
         <button
         onClick={getUserDetails}
